@@ -1,0 +1,129 @@
+/* ./pitpar/css/responsive.css */
+/* ===== MEDIA QUERIES PARA MÓVILES ===== */
+/* ==============================
+            RESPONSIVE
+   ============================== */
+@media (max-width: 768px) {
+    body {
+      padding-bottom: 160px;
+    }
+    body::before {
+	  width: 300px;
+	  height: 230px;	  
+	}
+	body.menu-open {
+    overflow: hidden; /* bloquea fondo */
+  }
+	
+    nav {
+      flex-direction: column;
+      gap: 8px;
+      z-index: 3001;
+    }
+
+    #musica button {
+      max-width: 90%;
+      font-size: 18px;
+      padding: 10px;
+    }
+
+    #contact-form {
+      width: 95%;
+    }
+    
+  #player {
+    display: block;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+    gap: 5px;
+  }
+  
+  #player-left {
+    justify-content: center;
+  }
+  #player-right {
+    justify-content: center;
+    gap: 5px;
+  }
+
+  #track-name {
+    margin-left: 0;
+    text-align: center;
+    font-size: 13px;
+  }
+  #player-center {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  #progress {
+    width: 100%;
+  }
+
+  #volume {
+    width: 120px;
+  }
+
+  #volume-percent {
+    text-align: center;
+  }
+  #menu-toggle {
+    display: flex;
+    z-index: 3001;
+  }
+
+  #nav-links {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: black;
+
+    flex-direction: row;
+    align-items: center;
+
+    padding: 100px 20px 140px;
+
+    overflow-y: auto; /* 🔥 CLAVE REAL */
+    -webkit-overflow-scrolling: touch;
+
+    z-index: 3000;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  #nav-links button {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .social-links {
+		gap: 30px;
+	}
+	.social-link img {
+		width: 28px;
+		height: 28px;
+	}
+	.keyboard-shortcuts {
+		display: none;
+	}
+	#atajos,
+	#linea,
+	#logoNavBar {
+		display: none;
+	}
+  .show.open::after {
+    transform: translate(-50%, -200%) rotate(-45deg);
+    opacity: 0;
+  }
+  #visit-counter {
+	  font-size: 10px;
+	  padding: 4px 8px;
+	  bottom: 180px;
+  }
+}

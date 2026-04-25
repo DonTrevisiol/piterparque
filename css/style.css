@@ -1,0 +1,530 @@
+/* ./pitpar/css/style.css */
+/* BODY */
+
+body {
+  background: #0a0a0a;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 40px;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: url('../assets/img/logopiter.svg') no-repeat center;
+  opacity: 0.04;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* TITULOS */
+h1 {
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 2px red;
+}
+
+/* NAV */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: black;
+  padding: 10px;
+  box-sizing: border-box;
+}
+#nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* BOTÓN HAMBURGUESA */
+#menu-toggle {
+  display: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.logo {
+  height: 40px;
+}
+/* LINKS */
+#nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+/* SECCIONES */
+.section {
+  max-width: 900px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 10px;
+  min-height: 80vh;
+}
+
+/* ALBUMS */
+.album {
+  display: inline-block;
+  margin: 15px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.album img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+
+.album img:hover {
+  transform: scale(1.05);
+}
+
+#contactoSaludo {
+  border: 3px solid white;
+  resize: none;
+  width: 300px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+/* LISTA DE CANCIONES */
+.section button {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 5px auto;
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid white;
+}
+
+button {
+  font-size: 15px;
+  background: none;
+  color: white;
+  border: 2px solid white;
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.track {
+  margin: 20px;
+}
+
+.song-credits {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+  text-align: left;
+  max-width: 600px;
+}
+
+.song-credits strong {
+  color: white;
+}
+
+.chord {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+.download-options,
+.album-lyricsandchords,
+.instrumental-options {
+  margin: 5px 0 10px 25px;
+  display: flex;
+  gap: 10px;
+}
+
+.download-options button {
+  background: #111;
+  border: 1px solid red;
+  color: white;
+}
+
+
+/*ATAJOS DE TECLADO*/
+.keyboard-shortcuts {
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  border-collapse: collapse;
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.keyboard-shortcuts th,
+.keyboard-shortcuts td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.keyboard-shortcuts thead {
+  background-color: #ff5722;
+}
+
+.keyboard-shortcuts tbody tr:nth-child(even) {
+  background-color: #2c2c2c;
+}
+
+.keyboard-shortcuts tbody tr:nth-child(odd) {
+  background-color: #262626;
+}
+
+.keyboard-shortcuts td strong {
+  background-color: #444;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+/* ==============================
+   REPRODUCTOR ESTILO SPOTIFY
+   ============================== */
+#player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #424242; /* color oscuro estilo Spotify */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px; /* espacio desde bordes */
+  box-shadow: 0 -2px 15px rgba(0,0,0,0.7);
+  z-index: 1000;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+#track-name {
+  margin-left: 10px; /* 👈 separa un poco del borde */
+  text-align: left;
+}
+
+/* BOTONES Y CONTROLES */
+#player button {
+  flex-shrink: 0; /* evita que se compriman */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+#player-left {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#player-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#player-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+/* BARRA DE PROGRESO */
+#progress {
+  width: 150px; /* ajustable */
+  flex-shrink: 0;
+}
+
+/* VOLUMEN */
+#player #volume {
+  width: 100px;  /* Barra de ajustable */
+}
+
+#player #volume-percent {
+  margin-left: 1px; /* Espacio entre el final de la barra de volumen y el porcentaje */
+  text-align: left;
+  min-width: 50px;
+}
+
+#volume.muted {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+footer {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  padding: 40px 0;
+  opacity: 0.6;
+}
+.footer-logo {
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+/*	PORTADA HERO */
+#hero {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 100px 20px 60px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+#hero h1 {
+  margin: 10px 0;
+}
+/* CONTENIDO */
+.hero-content {
+  position: relative;
+}
+.hero-logo {
+  width: 190px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+/*  LETRAS */
+.lyrics {
+  padding: 20px;
+  text-align: left;
+  background: #111;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-family: monospace;
+  white-space: pre;
+  line-height: 1.6;
+}
+/* DONACIONES */
+
+#donaciones {
+  text-align: center;
+}
+
+.donate-text {
+  margin: 20px auto;
+  max-width: 500px;
+  color: #ccc;
+}
+
+.donate-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.donate-btn {
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 2px solid white;
+  transition: 0.2s;
+}
+
+.donate-btn:hover {
+  background: white;
+  color: black;
+}
+
+.paypal {
+  background: #003087;
+  color: whitesmoke;
+}
+
+.mp {
+  background: #009ee3;
+  color: whitesmoke;
+}
+
+.donate-qr img {
+  width: 150px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.donate-footer {
+  margin-top: 20px;
+  color: #aaa;
+}
+li {
+	list-style-position: inside;
+	padding: 0;
+	text-align: center;
+}
+/* ==============================
+  GALERIA
+=================================
+*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.2s, filter 0.2s;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* ==============================
+  SHOWS
+  ===============================*/
+  .show {
+  background: #111;
+  padding: 12px;
+  margin: 10px auto;
+  border-radius: 10px;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* CINTA */
+.show::after {
+  content: attr(data-status);
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 200%; /* 👈 clave: más grande que el contenedor */
+  text-align: center;
+
+  transform: translate(-50%, -50%) rotate(-45deg);
+
+  background: rgba(255, 0, 0, 0.9);
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+
+  padding: 10px 0;
+
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+/*	COLORES SEGUN ESTADO DEL SHOW */
+.show[data-status="SHOW CONCLUIDO"]::after {
+  background: rgba(120,120,120,0.9);
+}
+
+.show[data-status="PROXIMAMENTE"]::after {
+  background: rgba(0,204,33,0.9);
+}
+
+.show[data-status="CANCELADO"]::after {
+  background: rgba(200,0,0,0.9);
+}
+
+.show[data-status="SOLD OUT"]::after {
+  background: rgba(253,86,14,0.9);
+}
+/*EFECTOS DE CINTA */
+.show::after {
+  transform-origin: center;
+}
+
+.show:hover::after,
+.show.open::after {
+  transform: translate(-50%, -50%) rotate(-45deg) scaleY(0);
+  opacity: 0;
+}
+/*	VISIT COUNTER */
+#visit-counter {
+  position: fixed;
+  bottom: 70px;
+  left: 10px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+/* ==============================
+   CURSORS PERSONALIZADOS
+   ============================== */
+html, body {
+  cursor: url('../assets/cursors/default.cur'), auto;
+}
+
+nav button {
+  cursor: url('../assets/cursors/select.cur'), pointer;
+}
+
+#musica button:hover,
+#letras button:hover {
+  cursor: url('../assets/cursors/pointer.cur'), pointer;
+}
+
+#player-center #play-pause,
+#player-center #prev,
+#player-center #next {
+  cursor: url('../assets/cursors/play.cur'), pointer;
+}
+.album {
+  cursor: url('../assets/cursors/albumSelect.cur'), auto;
+}
+button, a {
+  cursor: url('../assets/cursors/pointer.cur'), auto;
+}
+
+#progress, #volume {
+  cursor: url('../assets/cursors/playmusic.cur'), auto;
+}
+#mute {
+  cursor: url('../assets/cursors/muteCur.cur'), auto;
+}
+
+select {
+  cursor: url('../assets/cursors/noteSelect.cur'), auto;
+}
+
+input,
+textarea {
+  cursor: url('../assets/cursors/textSelect.cur'), text;
+}

@@ -1,0 +1,54 @@
+/* ./pitpar/css/social.css	*/
+
+/*SOCIAL NETWORKS*/
+.social-links {
+	display: flex;
+	gap: 20px; /* espacio entre iconos */
+	margin-top: 20px;
+	justify-content: center;
+}
+
+.social-link img {
+	/* Tamaño de los iconos: modificar width/height aquí */
+	width: 60px;   /* <-- cambia este valor para ajustar ancho */
+	height: 60px;  /* <-- cambia este valor para ajustar alto */
+	opacity: 0.7;  /* hace que se vean más claros inicialmente */
+	filter: brightness(15.5); /* aclara los iconos base */
+	transition: filter 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
+}
+
+/* Efecto general al pasar el mouse */
+.social-link:hover img {
+	opacity: 1;
+	transform: scale(1.2);
+	filter: brightness(1) none; /* elimina el brillo extra y aplica el filtro específico de cada red */
+}
+
+/* Cambios de color según la red social */
+.social-link.facebook:hover img {
+	filter: invert(38%) sepia(84%) saturate(421%) hue-rotate(183deg) brightness(96%) contrast(96%);
+}
+
+.social-link.twitter:hover img {
+	filter: invert(50%) sepia(93%) saturate(3640%) hue-rotate(200deg) brightness(95%) contrast(102%);
+}
+
+.social-link.instagram:hover img {
+	filter: invert(63%) sepia(63%) saturate(5200%) hue-rotate(330deg) brightness(95%) contrast(100%);
+}
+
+.social-link.youtube:hover img {
+	filter: invert(19%) sepia(94%) saturate(7451%) hue-rotate(357deg) brightness(95%) contrast(118%);
+}
+
+.social-link.tiktok:hover img {
+	filter: invert(24%) sepia(93%) saturate(7120%) hue-rotate(300deg) brightness(95%) contrast(105%);
+}
+
+.social-link.messenger:hover img {
+	filter: invert(55%) sepia(42%) saturate(3251%) hue-rotate(184deg) brightness(95%) contrast(102%);
+}
+
+.social-link.soundcloud:hover img {
+	filter: invert(60%) sepia(80%) saturate(1200%) hue-rotate(20deg) brightness(95%) contrast(105%);
+}
