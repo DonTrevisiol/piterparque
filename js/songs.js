@@ -6,7 +6,7 @@ export const albums = [
   {
     name: "Residuos peligrosos INCOMPLETO",
     cover: "assets/img/covers/residuos-peligrosos-cover.jpg",
-    folder: "residuos_peligrosos/",
+    folder: "residuos_peligrosos",
     zip: {
 		mp3: "https://drive.google.com/file/d/1KAtz3btcfGBM54iRbV4iGvCAUjEbCXeG/view?usp=sharing",
 		wav: "https://drive.google.com/file/d/1tT_tNDuv8eTm81FxA_CQNHez6nM3yX5u/view?usp=sharing"
@@ -14,7 +14,7 @@ export const albums = [
     songs: [{
 		
     file: "1_residuos-peligrosos-radioactivos.mp3",
-    instrumental: "../assets/music/residuos_peligrosos_mp3/instrumentales/1_residuos_peligrosos_radioactivos_instrumental.wav",
+    instrumental: "assets/music/residuos_peligrosos_mp3/instrumentales/1_residuos_peligrosos_radioactivos_instrumental.wav",
     name: "Residuos Peligrosos Radioactivos",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
@@ -94,7 +94,7 @@ export const albums = [
   },
   {
     file: "2_mj.mp3",
-    instrumental: "../assets/music/residuos_peligrosos_mp3/instrumentales/2_mj_instrumental.mp3",
+    instrumental: "assets/music/residuos_peligrosos_mp3/instrumentales/2_mj_instrumental.mp3",
     name: "M.J.",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
@@ -183,7 +183,7 @@ export const albums = [
   },
   {
     file: "3_hora-de-aventuras.mp3",
-    instrumental: "../assets/music/residuos_peligrosos_mp3/instrumentales/3_hora_de_aventura_instrumental.mp3",
+    instrumental: "assets/music/residuos_peligrosos_mp3/instrumentales/3_hora_de_aventura_instrumental.mp3",
     name: "Hora de aventuras",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
@@ -273,7 +273,7 @@ export const albums = [
   },
   {
     file: "4_me_columpio.mp3",
-    instrumental: "../assets/music/residuos_peligrosos_mp3/instrumentales/4_me_columpio.mp3",
+    instrumental: "assets/music/residuos_peligrosos_mp3/instrumentales/4_me_columpio.mp3",
     name: "Me columpio",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
@@ -352,7 +352,7 @@ export const albums = [
   },
   {
     file: "7_recordarte.mp3",
-    instrumental: "../assets/music/residuos_peligrosos_mp3/instrumentales/7_recordarte_instrumental.mp3",
+    instrumental: "assets/music/residuos_peligrosos_mp3/instrumentales/7_recordarte_instrumental.mp3",
     name: "Recordarte",
     credits: {author: DEFAULT_AUTHOR + ", Lucas Zegada y Matías Mamani", composer: "Lucas Zegada"},
     downloads: {
@@ -397,7 +397,7 @@ export const albums = [
   },
   {
     file: "8_volver-a-ser.mp3",
-    instrumental: "../assets/music/residuos_peligrosos_mp3/instrumentales/8_volver_a_ser_instrumental.mp3",
+    instrumental: "assets/music/residuos_peligrosos_mp3/instrumentales/8_volver_a_ser_instrumental.mp3",
     name: "Volver a ser",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
@@ -478,7 +478,7 @@ export const albums = [
   },
   {
     file: "9_amor.mp3",
-    instrumental: "../assets/music/residuos_peligrosos_mp3/instrumentales/9_amor_instrumental.mp3",
+    instrumental: "assets/music/residuos_peligrosos_mp3/instrumentales/9_amor_instrumental.mp3",
     name: "Amor",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
@@ -544,7 +544,7 @@ export const albums = [
   },
   {
     file: "11_muy-personal.mp3",
-    instrumental: "../assets/music/residuos_peligrosos_mp3/instrumentales/11_muy_personal_instrumental.mp3",
+    instrumental: "assets/music/residuos_peligrosos_mp3/instrumentales/11_muy_personal_instrumental.mp3",
     name: "Muy personal",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
@@ -629,7 +629,7 @@ export const albums = [
   },
   {
     file: "13_free-popcorn.mp3",
-    instrumental: "../assets/music/residuos_peligrosos_mp3/instrumentales/13_free_popcorn_instrumental.mp3",
+    instrumental: "assets/music/residuos_peligrosos_mp3/instrumentales/13_free_popcorn_instrumental.mp3",
     name: "Free popcorn",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
@@ -702,14 +702,14 @@ export const albums = [
   {
     name: "Trabajando duro",
     cover: "assets/img/covers/trabajando-duro.jpeg",
-    folder: "trabajando_duro/",
+    folder: "trabajando_duro",
     zip: {
 		mp3: "https://drive.google.com/file/d/1IuAwUTQNVEbTFGA4KoCxAGz9fRi1M4dC/view?usp=sharing",
 		wav: "https://drive.google.com/file/d/1BGYw2cl46JdW5jn4bz2XrbHyErLvKPOg/view?usp=sharing"
 	},
     songs: [{
       file: "1_un_gran_poder.mp3",
-      instrumental: "../assets/music/trabajando_duro_mp3/instrumentales/1_un_gran_poder_instrumental.mp3",
+      instrumental: "assets/music/trabajando_duro_mp3/instrumentales/1_un_gran_poder_instrumental.mp3",
       name: "Un gran poder",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
@@ -791,7 +791,7 @@ export const albums = [
     }, 
     {
       file: "2_ella_quiere_perrear.mp3",
-      instrumental: "../assets/music/trabajando_duro_mp3/instrumentales/2_ella_quiere_perrear_instrumental.mp3",
+      instrumental: "assets/music/trabajando_duro_mp3/instrumentales/2_ella_quiere_perrear_instrumental.mp3",
       name: "Ella quiere perrear",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
@@ -862,7 +862,7 @@ export const albums = [
     },
     {
       file: "3_game_over.mp3",
-      instrumental: "../assets/music/trabajando_duro_mp3/instrumentales/3_game_over_instrumental.mp3",
+      instrumental: "assets/music/trabajando_duro_mp3/instrumentales/3_game_over_instrumental.mp3",
       name: "Game over",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
@@ -921,7 +921,7 @@ export const albums = [
     },
     {
       file: "4_los_4_fantasticos.mp3",
-      instrumental: "../assets/music/trabajando_duro_mp3/instrumentales/4_los_4_fantasticos_instrumental.mp3",
+      instrumental: "assets/music/trabajando_duro_mp3/instrumentales/4_los_4_fantasticos_instrumental.mp3",
       name: "Los 4 fantasticos",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
@@ -1004,7 +1004,7 @@ export const albums = [
     },
     {
       file: "5_tu_madrugada.mp3",
-      instrumental: "../assets/music/trabajando_duro_mp3/instrumentales/5_tu_madrugada_instrumental.mp3",
+      instrumental: "assets/music/trabajando_duro_mp3/instrumentales/5_tu_madrugada_instrumental.mp3",
       name: "Tu madrugada",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
@@ -1043,7 +1043,7 @@ export const albums = [
     },
     {
       file: "6_algo_sin_concluir.mp3",
-      instrumental: "../assets/music/trabajando_duro_mp3/instrumentales/6_algo_sin_concluir_instru.mp3",
+      instrumental: "assets/music/trabajando_duro_mp3/instrumentales/6_algo_sin_concluir_instru.mp3",
       name: "Algo sin conclui",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
@@ -1102,7 +1102,7 @@ export const albums = [
     },
     {
       file: "7_mucho_mas_que_amigos.mp3",
-      instrumental: "../assets/music/trabajando_duro_mp3/instrumentales/7_mucho_mas_que_amigos_instrumental.mp3",
+      instrumental: "assets/music/trabajando_duro_mp3/instrumentales/7_mucho_mas_que_amigos_instrumental.mp3",
       name: "Mucho más que amigos",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
@@ -1138,7 +1138,7 @@ export const albums = [
     },
     {
       file: "8_refranes.mp3",
-      instrumental: "../assets/music/trabajando_duro_mp3/instrumentales/8_refranes_instrumental.mp3",
+      instrumental: "assets/music/trabajando_duro_mp3/instrumentales/8_refranes_instrumental.mp3",
       name: "Refranes",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
@@ -1237,7 +1237,7 @@ export const albums = [
     },
     {
       file: "9_el_ilusionista.mp3",
-      instrumental: "../assets/music/trabajando_duro_mp3/instrumentales/9_el_ilusionista_instrumental.mp3",
+      instrumental: "assets/music/trabajando_duro_mp3/instrumentales/9_el_ilusionista_instrumental.mp3",
       name: "El ilusionista",
       credits: {author: DEFAULT_AUTHOR, composer: "Mariano Vall"},
       downloads: {
@@ -1302,7 +1302,7 @@ export const albums = [
     },
     {
       file: "10_me_chupa_un_huevo.mp3",
-      instrumental: "../assets/music/trabajando_duro_mp3/instrumentales/10_me_chupa_un_huevo.mp3",
+      instrumental: "assets/music/trabajando_duro_mp3/instrumentales/10_me_chupa_un_huevo.mp3",
       name: "Me chupa un huevo",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
@@ -1312,7 +1312,7 @@ export const albums = [
     },
     {
       file: "11_y_la_mitad_del_otro.mp3",
-      instrumental: "../assets/music/trabajando_duro_mp3/instrumentales/11_y_la_mitad_del_otro_instrumental.mp3",
+      instrumental: "assets/music/trabajando_duro_mp3/instrumentales/11_y_la_mitad_del_otro_instrumental.mp3",
       name: "Y la mitad del otro",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
@@ -1370,7 +1370,7 @@ export const albums = [
     },
     {
       file: "12_un_besito_y_me_derrito.mp3",
-      instrumental: "../assets/music/trabajando_duro_mp3/instrumentales/12_un_besito_y_me_derrito_instrumental.mp3",
+      instrumental: "assets/music/trabajando_duro_mp3/instrumentales/12_un_besito_y_me_derrito_instrumental.mp3",
       name: "Un besito y me derrito",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
