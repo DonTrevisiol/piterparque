@@ -46,7 +46,7 @@ export function playSongByIndex(index, autoplay = true) {
     return;
     }
 
-  audio.src = "/assets/music/" + song.folder.slice(0, -1) + "_mp3/" + song.file;
+  audio.src = "assets/music/" + song.folder.slice(0, -1) + "_mp3/" + song.file;
   elements.trackName.textContent = song.name;
 
   if (autoplay) {

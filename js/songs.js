@@ -6,7 +6,7 @@ export const albums = [
   {
     name: "Residuos peligrosos INCOMPLETO",
     cover: "assets/img/covers/residuos-peligrosos-cover.jpg",
-    folder: "residuos_peligrosos",
+    folder: "/residuos_peligrosos",
     zip: {
 		mp3: "https://drive.google.com/file/d/1KAtz3btcfGBM54iRbV4iGvCAUjEbCXeG/view?usp=sharing",
 		wav: "https://drive.google.com/file/d/1tT_tNDuv8eTm81FxA_CQNHez6nM3yX5u/view?usp=sharing"
@@ -702,7 +702,7 @@ export const albums = [
   {
     name: "Trabajando duro",
     cover: "assets/img/covers/trabajando-duro.jpeg",
-    folder: "trabajando_duro",
+    folder: "/trabajando_duro",
     zip: {
 		mp3: "https://drive.google.com/file/d/1IuAwUTQNVEbTFGA4KoCxAGz9fRi1M4dC/view?usp=sharing",
 		wav: "https://drive.google.com/file/d/1BGYw2cl46JdW5jn4bz2XrbHyErLvKPOg/view?usp=sharing"
