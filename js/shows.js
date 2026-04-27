@@ -1,16 +1,28 @@
 // ./pitpar/js/shows.js
 
 export const shows = [
+	/*date: "AAAA/MM/DD",
+	 *buyLink: "paraComprarEntradas.com",
+	 *locationLink: "Para que te pasen la ubicación"
+	*/
   {
-    city: "Santa Cruz",
+	title: "Presentación de Residuos Peligrosos INCOMPLETO",
+    city: "Santa Cruz de La Sierra, Bolivia",
     date: "2024-08-17",
+    time: "21:30",
     place: "La casa de Jack",
+    locationLink: "",
+    price: "30 BOB",
     status: "SHOW CONCLUIDO"
   },
   {
-    city: "La Paz",
-    date: "A confirmar",
-    place: "El bestiario",
+	title: "YucaWaii Fest - Presentación en vivo",
+    city: "Santa Cruz de La Sierra, Bolivia",
+    date: "2026-05-10",
+    time: "A confirmar",
+    place: "El salón ámboro del Gran Hotel Santa Cruz",
+    locationLink: "https://maps.app.goo.gl/To55zUaSfB4oG1kk9",
+    price: "Entrada libre",
     status: "PROXIMAMENTE"
   }
 ];
@@ -21,22 +33,32 @@ function parseDate(dateStr) {
   return isNaN(d) ? null : d;
 }
 
+function formatDate(dateStr) {
+  const d = new Date(dateStr);
+  if (isNaN(d)) return dateStr;
+
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const year = d.getFullYear();
+
+  return `${day}/${month}/${year}`;
+}
+
 export function renderShows() {
   const section = document.getElementById("shows");
   section.innerHTML = "<h1>🎤 Shows</h1>";
 
   const today = new Date();
 
-  // separar shows
   const upcoming = [];
   const past = [];
   const unknown = [];
 
   shows.forEach(show => {
-    const d = parseDate(show.date);
+    const d = new Date(show.date);
 
-    if (!d) {
-      unknown.push(show); // "A confirmar"
+    if (isNaN(d)) {
+      unknown.push(show);
     } else if (d >= today) {
       upcoming.push(show);
     } else {
@@ -44,31 +66,47 @@ export function renderShows() {
     }
   });
 
-  // ordenar cada grupo
   upcoming.sort((a, b) => new Date(a.date) - new Date(b.date));
-  past.sort((a, b) => new Date(b.date) - new Date(a.date)); // más reciente primero
+  past.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const finalList = [...upcoming, ...unknown, ...past];
 
   finalList.forEach(show => {
-    const showDate = parseDate(show.date);
-    const isPast = showDate && showDate < today;
+    const showDate = new Date(show.date);
+    const isPast = !isNaN(showDate) && showDate < today;
 
     const div = document.createElement("div");
     div.classList.add("show");
 
-    if (isPast) div.classList.add("past");
+    // estado visual gris
+    if (isPast || show.status === "SOLD OUT" || show.status === "CANCELADO") {
+      div.classList.add("disabled");
+    }
 
-    // 👇 estado opcional (nuevo)
-    if (show.status) div.setAttribute("data-status", show.status);
+    if (show.status) {
+      div.setAttribute("data-status", show.status);
+    }
 
     div.innerHTML = `
-      <h3>📍 ${show.city}</h3>
-      <p>📅 ${show.date}</p>
-      <p>📌 ${show.place || ""}</p>
+      <h2>🎶 ${show.title}</h2>
+
+      <p>📍 ${show.city}</p>
+      <p>📅 ${formatDate(show.date)}</p>
+      <p>⏰ ${show.time || "A confirmar"}</p>
+      <p>📌 ${show.locationLink
+      ? `<a href="${show.locationLink}" target="_blank" class="location-link">${show.place}</a>`
+      : show.place || ""}
+      </p>
+
+      <p>💸 ${show.price || "A confirmar"}</p>
+
+      ${
+        show.buyLink && !div.classList.contains("disabled")
+          ? `<a href="${show.buyLink}" target="_blank" class="buy-btn">🎟 Comprar entrada</a>`
+          : ""
+      }
     `;
 
     section.appendChild(div);
   });
 }
-

@@ -423,6 +423,15 @@ li {
   overflow: hidden;
 }
 
+.location-link {
+  color: #4da6ff;
+  text-decoration: none;
+}
+
+.location-link:hover {
+  text-decoration: underline;
+}
+
 /* CINTA */
 .show::after {
   content: attr(data-status);
@@ -470,6 +479,32 @@ li {
 .show.open::after {
   transform: translate(-50%, -50%) rotate(-45deg) scaleY(0);
   opacity: 0;
+}
+/* SHOW DESHABILITADO */
+.show.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.show.disabled > * {
+  filter: grayscale(100%);
+}
+
+
+/* BOTÓN DE COMPRA */
+.buy-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: 2px solid white;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
+}
+
+.buy-btn:hover {
+  background: white;
+  color: black;
 }
 /*	VISIT COUNTER */
 #visit-counter {
