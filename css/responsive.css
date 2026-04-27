@@ -103,11 +103,16 @@
     font-size: 16px;
   }
   .social-links {
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding: 0 10px;
 		gap: 30px;
 	}
 	.social-link img {
-		width: 28px;
-		height: 28px;
+		width: 70px;
+		height: 70px;
 	}
 	.keyboard-shortcuts {
 		display: none;
