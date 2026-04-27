@@ -11,7 +11,8 @@ import { renderAlbumsLetras } from "./letras.js";
 
 // Inicializar navegación
 window.navigate = navigate;
-navigate("home");
+const initialSection = location.hash.replace("#", "") || "home";
+navigate(initialSection, false);
 
 // Inicializar menú hamburguesa
 setupMenu();
@@ -44,6 +45,11 @@ window.addEventListener("DOMContentLoaded", () => {
     const el = document.getElementById("gc-counter");
     if (el) el.textContent = "👁️ —";
   });
+});
+
+window.addEventListener("popstate", (event) => {
+  const section = event.state?.section || "home";
+  navigate(section, false);
 });
 
 // Render inicial
