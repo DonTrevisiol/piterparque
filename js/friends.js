@@ -8,9 +8,9 @@ export const friends = [
     name: "Claudel y sin fronteras",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BVfeeBOz2FGOCchHYHIX9aoblx6h_8J_ww&s",
     links: {
-      instagram: "instagram.com/claudelysinfronteras",
+      instagram: "https://www.instagram.com/claudelysinfronteras",
       youtube: "http://www.youtube.com/@claudelysinfronteras",
-      facebook: "facebook.com/Claudelysinfronteras"
+      facebook: "https://www.facebook.com/Claudelysinfronteras"
     }
   },
   {
