@@ -296,11 +296,13 @@ footer {
   position: relative;
   width: 100%;
   display: flex;
-  padding: 100px 20px 60px;
+  padding: 60px 20px 20px;
+  min-height: auto;
   justify-content: center;
   align-items: center;
   text-align: center;
   overflow: hidden;
+  flex-shrink: 0;
 }
 #hero h1 {
   margin: 10px 0;

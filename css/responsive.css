@@ -5,7 +5,7 @@
    ============================== */
 @media (max-width: 768px) {
     body {
-      padding-bottom: 160px;
+      padding-bottom: 180px;
     }
     body::before {
 	  width: 300px;
@@ -20,6 +20,11 @@
       gap: 8px;
       z-index: 3001;
     }
+    
+    #hero {
+		padding-top: 40px;
+		padding-bottom: 10px;
+	}
 
     #musica button {
       max-width: 90%;
