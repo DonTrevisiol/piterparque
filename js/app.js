@@ -8,6 +8,7 @@ import { setupMenu } from "./menu.js";
 import { renderAlbums as renderAlbumsMusica } from "./musica.js";
 import { renderAlbumsDescargas } from "./descargas.js";
 import { renderAlbumsLetras } from "./letras.js";
+import { renderFriends, initFriendsModal } from "./friends.js"
 
 // Inicializar navegación
 window.navigate = navigate;
@@ -57,6 +58,8 @@ renderAlbumsMusica();
 renderAlbumsDescargas();
 renderAlbumsLetras();
 renderAlbumsInstrumentales();
+renderFriends();
+initFriendsModal();
 // Formularios
 setupForm("contact-form", "form-status", "submit-btn"); // sugerencias
 setupForm("contact-form-main", "form-status-main", "submit-btn-main"); // contacto
