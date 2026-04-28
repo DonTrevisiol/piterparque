@@ -5,9 +5,7 @@ body {
   background: #0a0a0a;
   color: white;
   font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
   text-align: center;
   margin: 0;
   padding-bottom: 100px;
@@ -80,6 +78,8 @@ nav {
   margin: 20px auto;
   padding: 10px;
   min-height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ALBUMS */
@@ -296,7 +296,6 @@ footer {
   position: relative;
   width: 100%;
   display: flex;
-  padding: 60px 20px 20px;
   min-height: auto;
   justify-content: center;
   align-items: center;
