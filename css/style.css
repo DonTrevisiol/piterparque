@@ -149,6 +149,10 @@ button {
 .chord {
   color: #ff4d4d;
   font-weight: bold;
+  white-space: nowrap; /* evita cortes feos */
+  display: inline-block;
+  min-width: 20px;
+  text-align: center;
 }
 .download-options,
 .album-lyricsandchords,
@@ -318,14 +322,21 @@ footer {
 
 /*  LETRAS */
 .lyrics {
-  padding: 20px;
+  padding: 15px;
   text-align: left;
   background: #111;
   border-radius: 10px;
   margin-top: 15px;
   font-family: monospace;
-  white-space: pre;
-  line-height: 1.6;
+
+  white-space: pre-wrap; /* 🔥 clave */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  letter-spacing: 0.5px;
+}
+.lyrics div {
+  line-height: 1.4;
 }
 /* DONACIONES */
 

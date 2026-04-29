@@ -115,6 +115,15 @@
     padding: 10px;
     font-size: 16px;
   }
+  /*	LETRAS Y ACORDES: */
+  .lyrics {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .lyrics div {
+    display: block;
+  }
   .social-links {
 		display:flex;
 		flex-direction: column;
