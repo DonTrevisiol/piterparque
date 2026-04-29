@@ -196,7 +196,7 @@ function renderChords(song, albumIndex, reset = true) {
 
     const chordDiv = document.createElement("div");
     chordDiv.innerHTML = chordLine.replace(
-      /([A-Ga-g]#?)/g,
+      /([A-G]#?(m|maj|min|sus|add|dim|aug)?\d*)/g,
       '<span class="chord">$1</span>'
     );
 
@@ -224,26 +224,26 @@ function renderChords(song, albumIndex, reset = true) {
 
 
 function transposeChord(chord, steps) {
-  // Detectar si es menor por minúscula inicial
+  // 👉 detectar si es menor (si empieza en minúscula)
   const isMinor = chord[0] === chord[0].toLowerCase();
 
-  // Normalizar para cálculo
+  // 👉 normalizar base (primera letra en mayúscula)
   const normalized = chord.charAt(0).toUpperCase() + chord.slice(1);
 
-  return normalized.replace(/[A-G]#?/g, (match) => {
+  let result = normalized.replace(/[A-G]#?/g, (match) => {
     let index = notes.indexOf(match);
     if (index === -1) return match;
 
     let newIndex = (index + steps + 12) % 12;
-    let newNote = notes[newIndex];
-
-    // 👇 volver a minúscula si era menor
-    if (isMinor) {
-      newNote = newNote.toLowerCase();
-    }
-
-    return newNote;
+    return notes[newIndex];
   });
+
+  // 👉 SI ERA MENOR → agregar "m"
+  if (isMinor) {
+    result = result + "m";
+  }
+
+  return result;
 }
 
 
