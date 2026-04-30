@@ -42,21 +42,21 @@ function downloadFile(song, album, format) {
   // =========================
   if (song) {
 
-    // MP3 → LOCAL
     if (format === "mp3") {
+      // LOCAL (como ya lo tienes)
       const folder = "assets/music/" + album.folder.slice(0, -1) + "_mp3/";
       fileName = song.file;
       url = folder + fileName;
-    }
-
-    // WAV → GOOGLE DRIVE
-    else {
+    } 
+    
+    else if (format === "wav") {
+      // 🔥 AHORA DESDE GITHUB (no Drive)
       if (!song.downloads || !song.downloads.wav) {
         alert("⚠️ Esta canción no tiene versión WAV disponible");
         return;
       }
 
-      url = song.downloads.wav; // ya lo tienes en formato directo
+      url = song.downloads.wav;
       fileName = song.file.replace(".mp3", ".wav");
     }
   }
@@ -70,17 +70,21 @@ function downloadFile(song, album, format) {
       return;
     }
 
-    url = album.zip[format]; // ya directo desde Drive
+    url = album.zip[format];
     fileName = `${album.folder.slice(0, -1)}_${format}.zip`;
   }
 
   // =========================
-  // 🚀 EJECUTAR DESCARGA
+  // 🚀 EJECUTAR DESCARGA (OPTIMIZADO)
   // =========================
   const a = document.createElement("a");
   a.href = url;
   a.download = fileName;
-  a.target = "_blank"; // importante para Google Drive
+
+  // 👇 clave para móviles + GitHub
+  a.rel = "noopener noreferrer";
+  a.target = "_blank";
+
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);

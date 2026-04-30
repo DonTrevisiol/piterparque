@@ -8,8 +8,8 @@ export const albums = [
     cover: "assets/img/covers/residuos-peligrosos-cover.jpg",
     folder: "residuos_peligrosos/",
     zip: {
-		mp3: "https://drive.google.com/file/d/1KAtz3btcfGBM54iRbV4iGvCAUjEbCXeG/view?usp=sharing",
-		wav: "https://drive.google.com/file/d/1tT_tNDuv8eTm81FxA_CQNHez6nM3yX5u/view?usp=sharing"
+		mp3: "https://github.com/DonTrevisiol/piterparque/releases/download/residuos_peligrosos_v1/residuos_peligrosos_mp3.zip",
+		wav: "https://github.com/DonTrevisiol/piterparque/releases/download/residuos_peligrosos_v1/residuos_peligrosos_wav.zip"
 	},
     songs: [{
 		
@@ -18,7 +18,7 @@ export const albums = [
     name: "Residuos Peligrosos Radioactivos",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
-		wav: "https://drive.google.com/file/d/1wxEDbixY8Uqgdv66K54zlTQpvgBBcsOa/view?usp=drive_link"
+		wav: "https://github.com/DonTrevisiol/piterparque/releases/download/residuos_peligrosos_v1/1_residuos-peligrosos-radioactivos.wav"
 	},
     lyrics: `
     ESTRIBILLO x2:
@@ -98,7 +98,7 @@ export const albums = [
     name: "M.J.",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
-		wav: "https://drive.google.com/file/d/1BQuGz2felRBL-AT4dT05puCFzZwFFxIe/view?usp=drive_link"
+		wav: "https://github.com/DonTrevisiol/piterparque/releases/download/residuos_peligrosos_v1/2_mj.wav"
 	},
     lyrics: `
     [e] NO SE QUE ES LO QUE PASÓ
@@ -187,7 +187,7 @@ export const albums = [
     name: "Hora de aventuras",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
-		wav: "https://drive.google.com/file/d/1NUFmGBOQJM4lNDuaocktWrA-gPmgfmlW/view?usp=drive_link"
+		wav: "https://github.com/DonTrevisiol/piterparque/releases/download/residuos_peligrosos_v1/3_hora-de-aventuras.wav"
 	},
     lyrics: `
     [D] [A] [G] [A]
@@ -277,7 +277,7 @@ export const albums = [
     name: "Me columpio",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
-		wav: "https://drive.google.com/file/d/14uAkffmtftqM5ODTWVPajRjAIdj2zGe5/view?usp=drive_link"
+		wav: "https://github.com/DonTrevisiol/piterparque/releases/download/residuos_peligrosos_v1/4_me_columpio.wav"
 	},
     lyrics: `
     (Uff....)
@@ -294,7 +294,7 @@ export const albums = [
     name: "Las manos arriba",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
-		wav: "https://drive.google.com/file/d/1TDhO_NNAyUqhTR4274miZarwWBfAfP7l/view?usp=drive_link"
+		wav: "https://github.com/DonTrevisiol/piterparque/releases/download/residuos_peligrosos_v1/6_las-manos-arriba.wav"
 	},
     lyrics: `
     [g] [d] [D#] [A#] [F]
@@ -356,7 +356,7 @@ export const albums = [
     name: "Recordarte",
     credits: {author: DEFAULT_AUTHOR + ", Lucas Zegada y Matías Mamani", composer: "Lucas Zegada"},
     downloads: {
-		wav: "https://drive.google.com/file/d/1f7xAhZELzfUjKEKrLe9NtKjHtLgVprE3/view?usp=drive_link"
+		wav: "https://github.com/DonTrevisiol/piterparque/releases/download/residuos_peligrosos_v1/7_recordarte.wav"
 	},
     lyrics: `
     [D] [G] [b] [A]
@@ -401,7 +401,7 @@ export const albums = [
     name: "Volver a ser",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
-		wav: "https://drive.google.com/file/d/1ayhS1fo-84t9t0i_NCxddfe6I5xk3fOK/view?usp=drive_link"
+		wav: "https://github.com/DonTrevisiol/piterparque/releases/download/residuos_peligrosos_v1/8_volver-a-ser.wav"
 	},
     lyrics: `
     [C] [G] [a] [e] [F] [G]
@@ -482,7 +482,7 @@ export const albums = [
     name: "Amor",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
-		wav: "https://drive.google.com/file/d/1Ema-jhx2bbUegEpLBC2typaD_o6PrIDM/view?usp=drive_link"
+		wav: "https://github.com/DonTrevisiol/piterparque/releases/download/residuos_peligrosos_v1/9_amor.wav"
 	},
     lyrics: `
     QUE LINDO BOLUDO
@@ -548,7 +548,7 @@ export const albums = [
     name: "Muy personal",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
-		wav: "https://drive.google.com/file/d/1tKJfanPlToHckrRuGfmspya67MW6_QKB/view?usp=sharing"
+		wav: "https://github.com/DonTrevisiol/piterparque/releases/download/residuos_peligrosos_v1/11_muy_personal.wav"
 	},
     lyrics: `
     
@@ -633,7 +633,7 @@ export const albums = [
     name: "Free popcorn",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},
     downloads: {
-		wav: "https://drive.google.com/file/d/1xTk-MlZaSbt-MpWnoJkeHwwaLzWXYiNE/view?usp=drive_link"
+		wav: "https://github.com/DonTrevisiol/piterparque/releases/download/residuos_peligrosos_v1/13_free-popcorn.wav"
 	},
     lyrics: `
     BUENAS TARDES A DISFRUTAR DEL SHOW
@@ -704,8 +704,8 @@ export const albums = [
     cover: "assets/img/covers/trabajando-duro.jpeg",
     folder: "trabajando_duro/",
     zip: {
-		mp3: "https://drive.google.com/file/d/1IuAwUTQNVEbTFGA4KoCxAGz9fRi1M4dC/view?usp=sharing",
-		wav: "https://drive.google.com/file/d/1BGYw2cl46JdW5jn4bz2XrbHyErLvKPOg/view?usp=sharing"
+		mp3: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/trabajando_duro_mp3.zip",
+		wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/trabajando_duro_wav.zip"
 	},
     songs: [{
       file: "1_un_gran_poder.mp3",
@@ -713,7 +713,7 @@ export const albums = [
       name: "Un gran poder",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
-		  wav: "https://drive.google.com/file/d/147Fm2yFn6ReTHr3uDce52hNFvmgyrSwp/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/1_un_gran_poder.wav"
 	  },
       lyrics: `
       Ahora que salgo voy contento
@@ -795,7 +795,7 @@ export const albums = [
       name: "Ella quiere perrear",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
-		  wav: "https://drive.google.com/file/d/1N14F6HqhiCRpWk8CRq-MFG3D8OcQT8QL/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/2_ella_quiere_perrear.wav"
 	  },
       lyrics: `
       Ella me quiere besar y llevarme a los cielos
@@ -866,7 +866,7 @@ export const albums = [
       name: "Game over",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
-		  wav: "https://drive.google.com/file/d/1muDChnNKaOnjuj4vkuNodDhwydFJ6RZp/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/3_game_over.wav"
 	  },
       lyrics: `
       No toy' en game over
@@ -925,7 +925,7 @@ export const albums = [
       name: "Los 4 fantasticos",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
-		  wav: "https://drive.google.com/file/d/137Iflfb8pIhW0q8QYCbcHxy9ArX2giuU/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/4_los_4_fantasticos.wav"
 	  },
       lyrics: `
       Somos campeones del mundo y yo estoy afuera 'el país
@@ -1008,7 +1008,7 @@ export const albums = [
       name: "Tu madrugada",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
-		  wav: "https://drive.google.com/file/d/1maUgMuI5p_F1LrxdYkbaTTcdCA4R4xqn/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/5_tu_madrugada.wav"
 	  },
       lyrics: `
       Recuerdo el primer día que te vi
@@ -1047,7 +1047,7 @@ export const albums = [
       name: "Algo sin conclui",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
-		  wav: "https://drive.google.com/file/d/1wPyqyrfuxqePBP6CbjSzWGEmObQPrwvS/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/6_algo_sin_concluir.wav"
 	  },
       lyrics: `
       No se porqué siempre termino a medias
@@ -1106,7 +1106,7 @@ export const albums = [
       name: "Mucho más que amigos",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
-		  wav: "https://drive.google.com/file/d/1SXxvxD5QOnkM0ZaONs5BrFTR9gQ4TLWR/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/7_mucho_mas_que_amigos.wav"
 	  },
       lyrics: `
       (Si usted al mundo vino,
@@ -1142,7 +1142,7 @@ export const albums = [
       name: "Refranes",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
-		  wav: "https://drive.google.com/file/d/1v2-X5okRRdOFZBWhenGf1wKQmBTvnXhb/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/8_refranes.wav"
 	  },
       lyrics: `
       De lo que presumes es de lo que careces
@@ -1241,7 +1241,7 @@ export const albums = [
       name: "El ilusionista",
       credits: {author: DEFAULT_AUTHOR, composer: "Mariano Vall"},
       downloads: {
-		  wav: "https://drive.google.com/file/d/19G0n_GOVm_XkwH1CB4PZCAPWpv5hWAqo/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/9_el_ilusionista.wav"
 	  },
       lyrics: `
       Intro:
@@ -1306,7 +1306,7 @@ export const albums = [
       name: "Me chupa un huevo",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
-		  wav: "https://drive.google.com/file/d/1bgAKRDXbYLxi3cumvIMyDyf3WdOZHyLI/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/10_me_chupa_un_huevo.wav"
 	  },
       lyrics: "¿Es en serio?. Es una canción instrumental... -.-"
     },
@@ -1316,7 +1316,7 @@ export const albums = [
       name: "Y la mitad del otro",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
-		  wav: "https://drive.google.com/file/d/152qhx9L3MUxSGiTTayiJiGvduwTWxsJo/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/11_y_la_mitad_del_otro.wav"
 	  },
       lyrics: `
       coro:
@@ -1374,7 +1374,7 @@ export const albums = [
       name: "Un besito y me derrito",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
-		  wav: "https://drive.google.com/file/d/16XE3I7VjOaJ9MIfDhMDGTiO-rN7z3kGp/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/12_un_besito_y_me_derrito.wav"
 	  },
       lyrics: `
       Gracias a ti volví creer en el amor
@@ -1447,7 +1447,7 @@ export const albums = [
       credits: {author: DEFAULT_AUTHOR + " Y Claudel", composer: DEFAULT_COMPOSER},
       name: "Trabajando duro - ft. Claudel y sin fronteras",
       downloads: {
-		  wav: "https://drive.google.com/file/d/14rVlO5YTpvvGdD10_8Pg92ggDLQaqu0N/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/13_trabajando_duro_ft.claudel_y_sin_fronteras.wav"
 	  },
       lyrics: `
       Para los trabajadores del hospital de Ledesma, Jujuy. 
@@ -1490,7 +1490,7 @@ export const albums = [
       name: "Agradecimientos",
       credits: {author: DEFAULT_AUTHOR, composer: DEFAULT_COMPOSER},
       downloads: {
-		  wav: "https://drive.google.com/file/d/1sx80XwOMVawyasYZ261zAnML3lYeXuoQ/view?usp=drive_link"
+		  wav: "https://github.com/DonTrevisiol/piterparque/releases/download/trabajando_duro_v1/14_agradecimientos.wav"
 	  },
       lyrics: `
       AGRADECIMIENTOS:
