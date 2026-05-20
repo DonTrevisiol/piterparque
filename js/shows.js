@@ -3,10 +3,20 @@
 export const shows = [
 /*
 FORMATO:
-date: "DD/MM/AAAA"
-time: "HH:MM"
-buyLink: "compraTuEntrada.com"
+
+{
+  title: "Mi nuevo show",
+  city: "Bogotá, Colombia",
+  date: "25/06/2026",
+  time: "20:00",
+  place: "Teatro X",
+  locationLink: "https://maps...",
+  price: "50.000 COP",
+  buyLink: "https://..."
+}
+
 */
+
   {
     title: "Presentación de Residuos Peligrosos INCOMPLETO",
     city: "Santa Cruz de La Sierra, Bolivia",
@@ -14,9 +24,9 @@ buyLink: "compraTuEntrada.com"
     time: "21:30",
     place: "La casa de Jack",
     locationLink: "",
-    price: "30 BOB",
-    status: "SHOW CONCLUIDO"
+    price: "30 BOB"
   },
+
   {
     title: "YucaWaii Fest - Presentación en vivo",
     city: "Santa Cruz de La Sierra, Bolivia",
@@ -24,14 +34,14 @@ buyLink: "compraTuEntrada.com"
     time: "18:00",
     place: "El salón ámboro del Gran Hotel Santa Cruz",
     locationLink: "https://maps.app.goo.gl/To55zUaSfB4oG1kk9",
-    price: "Entrada libre",
-    status: "PROXIMAMENTE"
+    price: "Entrada libre"
   }
+
 ];
 
 
 // ============================
-// PARSE FECHA + HORA (LOCAL)
+// PARSE FECHA + HORA
 // ============================
 function parseDateTime(dateStr, timeStr = "00:00") {
   if (!dateStr) return null;
@@ -50,20 +60,23 @@ function parseDateTime(dateStr, timeStr = "00:00") {
 
 
 // ============================
-// SOLO FECHA (SIN HORA)
+// SOLO FECHA
 // ============================
 function parseOnlyDate(dateStr) {
   if (!dateStr) return null;
+
   const [day, month, year] = dateStr.split("/").map(Number);
+
   return new Date(year, month - 1, day);
 }
 
 
 // ============================
-// FORMATO
+// FORMATO FECHA
 // ============================
 function formatDate(dateStr) {
   const d = parseOnlyDate(dateStr);
+
   if (!d) return dateStr;
 
   const day = String(d.getDate()).padStart(2, "0");
@@ -78,18 +91,26 @@ function formatDate(dateStr) {
 // CUENTA REGRESIVA
 // ============================
 function getCountdownText(showDateTime, showDateOnly) {
+
   const now = new Date();
 
-  // 👇 detectar si es HOY (solo fecha, sin hora)
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const today = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate()
+  );
 
+  // 🔥 HOY
   if (showDateOnly.getTime() === today.getTime()) {
     return "🔥 HOY";
   }
 
   const diff = showDateTime - now;
 
-  if (diff <= 0) return "🎤 En curso / Finalizado";
+  // 🎤 FINALIZADO
+  if (diff <= 0) {
+    return "🎤 En curso / Finalizado";
+  }
 
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
@@ -101,10 +122,55 @@ function getCountdownText(showDateTime, showDateOnly) {
 
 
 // ============================
+// STATUS DINÁMICO
+// ============================
+function getDynamicStatus(show, showDateOnly) {
+
+  // 👇 status manual prioritario
+  if (show.status === "CANCELADO") {
+    return "CANCELADO";
+  }
+
+  if (show.status === "SOLD OUT") {
+    return "SOLD OUT";
+  }
+
+  const now = new Date();
+
+  const today = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate()
+  );
+
+  const eventDay = new Date(
+    showDateOnly.getFullYear(),
+    showDateOnly.getMonth(),
+    showDateOnly.getDate()
+  );
+
+  // 🔥 HOY
+  if (eventDay.getTime() === today.getTime()) {
+    return "HOY";
+  }
+
+  // 🎤 SHOW CONCLUIDO
+  if (eventDay < today) {
+    return "SHOW CONCLUIDO";
+  }
+
+  // 🚀 FUTURO
+  return "PROXIMAMENTE";
+}
+
+
+// ============================
 // RENDER
 // ============================
 export function renderShows() {
+
   const section = document.getElementById("shows");
+
   section.innerHTML = "<h1>🎤 Shows</h1>";
 
   const now = new Date();
@@ -114,46 +180,88 @@ export function renderShows() {
   const unknown = [];
 
   shows.forEach(show => {
+
     const d = parseDateTime(show.date, show.time);
 
     if (!d) {
       unknown.push(show);
-    } else if (d >= now) {
+    }
+
+    else if (d >= now) {
       upcoming.push(show);
-    } else {
+    }
+
+    else {
       past.push(show);
     }
+
   });
 
-  upcoming.sort((a, b) => parseDateTime(a.date, a.time) - parseDateTime(b.date, b.time));
-  past.sort((a, b) => parseDateTime(b.date, b.time) - parseDateTime(a.date, a.time));
+  upcoming.sort(
+    (a, b) =>
+      parseDateTime(a.date, a.time) -
+      parseDateTime(b.date, b.time)
+  );
 
-  const finalList = [...upcoming, ...unknown, ...past];
+  past.sort(
+    (a, b) =>
+      parseDateTime(b.date, b.time) -
+      parseDateTime(a.date, a.time)
+  );
+
+  const finalList = [
+    ...upcoming,
+    ...unknown,
+    ...past
+  ];
 
   finalList.forEach(show => {
+
     const showDateTime = parseDateTime(show.date, show.time);
+
     const showDateOnly = parseOnlyDate(show.date);
 
-    const isPast = showDateTime && showDateTime < now;
+    const dynamicStatus = getDynamicStatus(
+      show,
+      showDateOnly
+    );
+
+    const isPast =
+      showDateTime &&
+      showDateTime < now;
 
     const div = document.createElement("div");
+
     div.classList.add("show");
 
-    if (isPast || show.status === "SOLD OUT" || show.status === "CANCELADO") {
+    // 👇 deshabilitar
+    if (
+      isPast ||
+      dynamicStatus === "SOLD OUT" ||
+      dynamicStatus === "CANCELADO"
+    ) {
       div.classList.add("disabled");
     }
 
-    if (show.status) {
-      div.setAttribute("data-status", show.status);
-    }
+    // 👇 status visual
+    div.setAttribute(
+      "data-status",
+      dynamicStatus
+    );
 
-    const countdownId = "countdown-" + Math.random().toString(36).substr(2, 9);
+    const countdownId =
+      "countdown-" +
+      Math.random()
+        .toString(36)
+        .substr(2, 9);
 
     div.innerHTML = `
       <h2>🎶 ${show.title}</h2>
 
       <p>📍 ${show.city}</p>
+
       <p>📅 ${formatDate(show.date)}</p>
+
       <p>⏰ ${show.time || "A confirmar"}</p>
 
       <p>📌 ${
@@ -171,7 +279,12 @@ export function renderShows() {
       }
 
       ${
-        show.buyLink && !(isPast || show.status === "SOLD OUT" || show.status === "CANCELADO")
+        show.buyLink &&
+        !(
+          isPast ||
+          dynamicStatus === "SOLD OUT" ||
+          dynamicStatus === "CANCELADO"
+        )
           ? `<a href="${show.buyLink}" target="_blank" class="buy-btn">🎟 Comprar entrada</a>`
           : ""
       }
@@ -179,15 +292,41 @@ export function renderShows() {
 
     section.appendChild(div);
 
+    // ====================
+    // TIMER
+    // ====================
     if (showDateTime && !isPast) {
-      const el = document.getElementById(countdownId);
+
+      const el =
+        document.getElementById(countdownId);
 
       const update = () => {
-        el.textContent = getCountdownText(showDateTime, showDateOnly);
+
+        el.textContent =
+          getCountdownText(
+            showDateTime,
+            showDateOnly
+          );
+
+        // 🔴 rojo últimos 10 min
+        const diff =
+          showDateTime - new Date();
+
+        if (
+          diff > 0 &&
+          diff <= 10 * 60 * 1000
+        ) {
+          el.style.color = "red";
+        }
+
       };
 
       update();
+
       setInterval(update, 1000);
+
     }
+
   });
+
 }
