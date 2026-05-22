@@ -543,7 +543,7 @@ export const albums = [
 `
   },
   {
-    file: "11_muy-personal.mp3",
+    file: "11_muy_personal.mp3",
     instrumental: "assets/music/residuos_peligrosos_mp3/instrumentales/11_muy_personal_instrumental.mp3",
     name: "Muy personal",
     credits: {author: DEFAULT_AUTHOR, composer: "Lucas Zegada"},

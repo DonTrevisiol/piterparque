@@ -3,11 +3,8 @@ import { navigate } from "./router.js";
 import { albums } from "./songs.js";
 import { initPlayer, playSongByIndex } from "./player/player.js";
 import { setupForm } from "./form.js";
-import { renderAlbumsInstrumentales } from "./instrumentales.js"
 import { setupMenu } from "./menu.js";
 import { renderAlbums as renderAlbumsMusica } from "./musica.js";
-import { renderAlbumsDescargas } from "./descargas.js";
-import { renderAlbumsLetras } from "./letras.js";
 import { renderFriends, initFriendsModal } from "./friends.js"
 
 // Inicializar navegación
@@ -21,11 +18,12 @@ setupMenu();
 // Inicializar reproductor
 const songs = albums.flatMap(album => (album.songs || []).map(song => ({
   ...song,
-  folder: album.folder
+  folder: album.folder,
+  cover: album.cover
 })));
 
 initPlayer(songs);
-playSongByIndex(0, false);
+
 window.playSongByIndex = playSongByIndex;
 
 document.addEventListener("click", (e) => {
@@ -55,9 +53,6 @@ window.addEventListener("popstate", (event) => {
 
 // Render inicial
 renderAlbumsMusica();
-renderAlbumsDescargas();
-renderAlbumsLetras();
-renderAlbumsInstrumentales();
 renderFriends();
 initFriendsModal();
 // Formularios

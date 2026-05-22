@@ -20,6 +20,7 @@ export function initPlayer(_songs) {
 
   elements = {
     trackName: document.getElementById("track-name"),
+    cover: document.getElementById("album-cover"),
     playBtn: document.getElementById("play-pause"),
     prevBtn: document.getElementById("prev"),
     nextBtn: document.getElementById("next"),
@@ -30,6 +31,13 @@ export function initPlayer(_songs) {
     timeDisplay: document.getElementById("time"),
   };
 
+
+// ============================
+// 🎲 canción aleatoria inicial
+// ============================
+
+  const randomIndex = Math.floor(Math.random() * songs.length);
+  playSongByIndex(randomIndex, false)
   setupEvents();
   updateVolumeUI();
 }
@@ -37,6 +45,12 @@ export function initPlayer(_songs) {
 export function playSongByIndex(index, autoplay = true) {
   if (index < 0) index = songs.length - 1;
   if (index >= songs.length) index = 0;
+
+  const cover = document.getElementById("player-cover");
+
+if (cover && song.cover) {
+  cover.src = song.cover;
+}
 
   currentIndex = index;
   const song = songs[currentIndex];
@@ -48,6 +62,7 @@ export function playSongByIndex(index, autoplay = true) {
 
   audio.src = "assets/music/" + song.folder.slice(0, -1) + "_mp3/" + song.file;
   elements.trackName.textContent = song.name;
+  elements.cover.src = song.cover || "";
 
   if (autoplay) {
     audio.play();
@@ -80,11 +95,12 @@ function toggleMute() {
 
 // ============================
 
-export function playCustomSong({ name, src }){
+export function playCustomSong({ name, src, cover }){
   if(!src) return;
   
   audio.src = src;
   elements.trackName.textContent = name;
+  elements.cover.src = cover || "";
   
   audio.play();
   elements.playBtn.textContent = "⏸️";

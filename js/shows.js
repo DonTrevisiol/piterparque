@@ -12,7 +12,8 @@ FORMATO:
   place: "Teatro X",
   locationLink: "https://maps...",
   price: "50.000 COP",
-  buyLink: "https://..."
+  buyLink: "https://...",
+  status: "" -> SOLO SE COLOCA STATUS EN CASO ESPECIAL
 }
 
 */

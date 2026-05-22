@@ -1,6 +1,5 @@
 /* ./pitpar/router.js */
 import { renderShows } from "./shows.js";
-import { renderAlbumsInstrumentales } from "./instrumentales.js"
 
 export function navigate(section, addToHistory = true) {
 
@@ -20,7 +19,7 @@ export function navigate(section, addToHistory = true) {
 
   // renders especiales
   if (section === 'shows') renderShows();
-  if (section === 'instrumentales') renderAlbumsInstrumentales();
+
 
   const hero = document.getElementById('hero');
   hero.style.display = (section === 'home') ? 'flex' : 'none';

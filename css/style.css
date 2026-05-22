@@ -149,12 +149,12 @@ button {
 .chord {
   color: #ff4d4d;
   font-weight: bold;
-  white-space: nowrap; /* evita cortes feos */
   display: inline-block;
-  min-width: 20px;
-  text-align: center;
+  white-space: nowrap;
 }
+
 .download-options,
+.album-download-options,
 .album-lyricsandchords,
 .instrumental-options {
   margin: 5px 0 10px 25px;
@@ -167,6 +167,96 @@ button {
   border: 1px solid red;
   color: white;
 }
+
+.song-main-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.dynamic-content {
+  margin-top: 25px;
+}
+
+.lyrics-text {
+  white-space: pre-wrap;
+  line-height: 1.8;
+}
+
+.transpose-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+.chord-line {
+  font-family: monospace;
+  white-space: pre;
+}
+
+.lyric-line {
+  margin-bottom: 12px;
+}
+
+.download-options-box {
+  display: flex;
+  gap: 10px;
+}
+
+
+
+
+
+
+
+
+/* =========================
+   SONG DETAIL
+========================= */
+
+.song-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.song-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.music-btn {
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.lyrics-container {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.lyrics {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  overflow-x: auto;
+}
+
+.song-btn {
+  width: 100%;
+}
+
+.album-download-box {
+  margin-bottom: 30px;
+}
+
 
 
 /*ATAJOS DE TECLADO*/
@@ -229,9 +319,42 @@ button {
   box-sizing: border-box;
 }
 
+/* =========================
+   PORTADA DEL REPRODUCTOR
+========================= */
+
+#album-cover {
+  width: 50px;
+  height: 50px;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  margin-right: 12px;
+
+  flex-shrink: 0;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+#track-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-width: 0;
+}
+
 #track-name {
-  margin-left: 10px; /* 👈 separa un poco del borde */
-  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.instrumental-downloads {
+  display:flex;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 /* BOTONES Y CONTROLES */
@@ -247,6 +370,7 @@ button {
   flex: 1;
   min-width: 0;
   display: flex;
+  align-items: center;
   justify-content: flex-start;
 }
 
