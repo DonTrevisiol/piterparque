@@ -5,6 +5,16 @@
 // =======================
 export const friends = [
   {
+    name: "Lo vi x TV",
+    img: "assets/img/amigos/lo_vi_x_tv.jpg",
+    links: {
+      instagram: "https://www.instagram.com/lo.vi.x.tv/",
+      spotify: "https://open.spotify.com/intl-es/album/0c7VXnIbMgTc6xY1Xa7Ki1",
+      youtube: "https://music.youtube.com/playlist?list=OLAK5uy_lgv6BVfj_WPeOoHEupJsb3JK9Nf0pxSIA"
+
+    }
+  },
+  {
     name: "Claudel y sin fronteras",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7BVfeeBOz2FGOCchHYHIX9aoblx6h_8J_ww&s",
     links: {
@@ -32,7 +42,8 @@ const socialIcons = {
   tiktok: "assets/img/social/tiktok.svg",
   twitter: "assets/img/social/x.svg",
   soundcloud: "assets/img/social/sound_cloud.svg",
-  messenger: "assets/img/social/messenger.svg"
+  messenger: "assets/img/social/messenger.svg",
+  spotify: "assets/img/social/spotify.svg"
 };
 
 // =======================
